@@ -1,0 +1,333 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Spinnaker&family=Ysabeau+SC:wght@500&display=swap')
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-weight: 300;
+    color: black;
+  /*  background-color: #FFD9DA;*/
+}
+
+/* create a style for headings and logo*/
+
+h1,h2 {
+  font-family: Spinnaker, sans-serif;
+  font-style: bold;
+  letter-spacing: 4px;
+  color: #100F1A;
+}
+h2 {
+  text-transform: uppercase;
+}
+h3{
+  color: #202241;
+  font-family: Ysabeau;
+  font-style: italic;
+  font-size: 96%;
+}
+p{
+  color: #202241;
+  font-family: Ysabeau;
+  font-size: 120%;
+
+}
+#logo {
+  margin-left: 50px;
+  font-family: Pristina;
+  color: #6B4E71;
+  font-style: italic;
+  float: left;
+  font-size: 500%;
+  letter-spacing: 7px;
+}
+/* create a style for navigation menu*/
+#menu {
+    font-size: 120%;
+    letter-spacing: 3px;
+    padding-top: 20px;
+}
+/* put in the same line logo and menu*/
+#menu, #logo {
+    line-height: 40px;
+}
+
+#menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 25px;
+
+}
+
+#menu a {
+    text-decoration: none;
+    color: grey;
+}
+
+#menu a:hover {
+    border-bottom: 3px solid #202241;
+    font-size: 130%;
+}
+
+.active {
+    border-bottom: 1px solid #202241;
+}
+/* create a style for top image and cover text */
+
+#img-outer {
+    height: 750px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#top-img {
+    height: 750px;
+    width: 100%;
+    background: url('top.png') no-repeat center center;
+
+/* animates zoom effect on loading page   zooming the top_img*/
+    animation-name: zoom_images;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creates the level of zoom for zoom_images*/
+@keyframes zoom_images {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.15);
+    }
+}
+/* create style for second section */
+.welcome{
+  text-align: center;
+  padding-top: 20px;
+  margin: 20px 0;
+  font-size: 220%;
+
+}
+#second{
+  height: 520px;
+  background-color: #F1E3F3;
+  }
+.blocs{
+  padding-top: 30px;
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 120%;
+  }
+
+.pict{
+  width: 150px;
+  height: 150px;
+  padding: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+#third{
+  text-align: center;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+#fourth{
+  height: 500px;
+  width: 100%;
+  background-color: #F5F0F6;
+    }
+.card{
+  padding-top: 20px;
+  float: left;
+  height: 500px;
+  width: 20%;
+  text-align: center;
+  font-size: 120%;
+}
+.card img{
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  /* footer */
+
+  footer {
+      height: 100px;
+  }
+
+  .social-networks {
+      text-align: center;
+  }
+
+  .social-networks > li {
+      display: inline;
+  }
+
+  .social-networks i {
+      font-size: 160%;
+      margin: 1%;
+      padding: 5%;
+      color: #3a3a3a;
+  }
+  .social-networks a:hover {
+      border-bottom: 3px solid #202241;
+      font-size: 130%;
+  }
+  /* gallery */
+
+  #photos {
+      clear: both;
+      line-height: 0;
+      column-count: 4;
+      column-gap: 0;
+  }
+
+  #photos > img {
+      width: 100%;
+  }
+
+  /* Form */
+  #signup {
+      float: left;
+      background: url('top2a.jpg') no-repeat center center;
+      background-size: cover;
+      background-position: 75%;
+      padding: 100px 55% 100px 1%;;
+      flex-grow: 1;
+  }
+
+
+  #signup-form {
+      color: #ffffff;
+      background-color: rgba(234, 234, 234, 0.5);
+      padding: 30px;
+  }
+
+
+  #signup-form>h2 {
+      color: #fafafa;
+      margin-bottom: 20px;
+  }
+
+
+  .text-input {
+      background: transparent;
+      color: #fafafa;
+      width: 100%;
+      height: 25px;
+      margin: 5px 0 20px 0;
+      border: 1px solid #fafafa;
+      border-radius: 2px;
+      padding: 0 5px;
+  }
+
+
+  /**************** Media queries ****************/
+
+/* For larger to medium screens size from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+    #second {
+        margin: 0 auto;
+        background-color: inherit;
+    }
+    #third{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+
+/* For medium screen sizes from 950px wide and down */
+@media screen and (max-width: 950px) {
+
+    #second{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #fourth{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .blocs {
+        width: inherit;
+        border-style: none;
+    }
+
+    .blocs h1,h2{
+        width: 100%;
+        text-align: center;
+        font-size: 80%;
+    }
+    .pict{
+      width: 95%;
+      margin: 0 auto;
+      border-style: none;
+    }
+    .card {
+      width: 90%;
+      height: auto;
+      font-size: 80%;
+      margin: 0 auto;
+      clear: right;
+    }
+    #fourth{
+      background-color: inherit;
+        }
+    #photos {
+        column-count: 3;
+    }
+}
+
+/* For small screen sizes 750px and down */
+@media screen and (max-width: 750px) {
+      #photos {
+      column-count: 2;
+    }
+
+    #logo {
+      margin-left: 25px;
+      letter-spacing: 4px;
+      float: left;
+      font-size: 300%;
+
+    }
+    #menu {
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+    #signup {
+        width: 90%;
+        padding:5%;
+    }
+    footer{
+      float: left;
+    }
+    .social-networks > li {
+        display: inline;
+        align-items: center;
+    }
+    social-networks i {
+        font-size: 170%;
+    }
+  }
